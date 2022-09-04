@@ -1,0 +1,28 @@
+{
+	"rssfeed": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"jcr:lastModifiedBy": "admin",
+		"description": "rainy day",
+		"title": "Rain",
+		"pubdate": "01/09/2000",
+		"jcr:created": "Fri Sep 02 2022 19:48:44 GMT+0530",
+		"jcr:lastModified": "Fri Sep 02 2022 20:00:25 GMT+0530",
+		"sling:resourceType": "aem-project/components/rssfeed",
+		"multifield": {
+			"jcr:primaryType": "nt:unstructured",
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"description": "Description one",
+				"pubdate": "01/09/2000",
+				"title": "Title one"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"description": "Description two",
+				"pubdate": "02/09/2001",
+				"title": "Title two"
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Multifield Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="true">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <url
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="RSS Feed URL"
+                                        name="./url"/>
+                                    <rsscount
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldDescription="Number of  RSS items can be configured here"
+                                        fieldLabel="RSS Feed Count"
+                                        max="100"
+                                        min="1"
+                                        name="./count"
+                                        step="1"
+                                        value="1"/>
+                                    <heading
+                                        granite:class="coral-Heading coral-Heading--4"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                        level="{Long}4"
+                                        text="Manual Entry for RSS feed "/>
+                                    <accordion
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./multifield">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <title
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Enter RSS title"
+                                                            fieldLabel="RSS Title"
+                                                            name="./title"/>
+                                                        <description
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Enter RSS description"
+                                                            fieldLabel="Description"
+                                                            name="./description"/>
+                                                        <pubdate
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Enter RSS description"
+                                                            fieldLabel="RSS pubdate"
+                                                            name="./pubdate"/>
+                                                    </items>
+                                                </column>
+                                            </items>
+                                        </field>
+                                    </accordion>
+                                </items>
+                            </column>
+                        </items>
+                    </general>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

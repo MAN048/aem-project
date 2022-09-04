@@ -1,0 +1,37 @@
+<h2 class="cmp-helloworld__title">RSS Feed 2 Component</h2>
+<sly data-sly-use.accordion="${'com.fedex.aem.core.models.RssModel'}"></sly>
+<div class ="container">
+ <div id="divRss"> </div>
+ </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script type="text/javascript" src="https://jquery-plugins.net/FeedEk/FeedEk.min.js"></script>
+
+<script type="text/javascript">
+ $(document).ready(function () {
+ $('#divRss').FeedEk({
+                FeedUrl: '${accordion.url @ context='scriptString'}', MaxCount: ${accordion.count @ context='scriptString'}
+			});
+ //setInterval is used for auto-update of RSS feeds..
+ setInterval(function() {
+       		$('#divRss').FeedEk({
+                FeedUrl: '${accordion.url @ context='scriptString'}', MaxCount: ${accordion.count @ context='scriptString'}
+			});
+            }, 30000);
+
+    });
+ </script>
+
+
+
+
+<sly data-sly-test.configured="${accordion.configured}"></sly>
+<sly data-sly-test="${wcmmode.edit && !configured}">
+    <div data-emptytext="${component.title}" class="cq-placeholder"></div>
+</sly>
+<div data-sly-test="${configured}" class="someClass">
+    <ul data-sly-list="${accordion.bulletPointList}">
+    <li class="">${item.title }</li>
+        <li class="">${item.description @ context='html'}</li>
+        <li class="">${item.pubdate @ context='html'}</li>
+    </ul>
+</div>

@@ -1,0 +1,12 @@
+{
+	"rssfeed": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"jcr:lastModifiedBy": "admin",
+		"jcr:created": "Fri Sep 02 2022 19:48:44 GMT+0530",
+		"url": "https://sports.ndtv.com/rss/cricket",
+		"count": "5",
+		"jcr:lastModified": "Fri Sep 02 2022 19:48:57 GMT+0530",
+		"sling:resourceType": "aem-project/components/rssfeed"
+	}
+}
